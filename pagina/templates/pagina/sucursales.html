@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sucursales</title>
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+</head>
+
+<body>
+
+<header>
+    <h1>Sucursales</h1>
+    <nav>
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'productos' %}">Productos</a>
+        <a href="{% url 'autos' %}">Autos</a>
+        <a href="{% url 'eventos' %}">Eventos</a>
+        <a href="{% url 'sucursales' %}">Sucursales</a>
+        <a href="/comentarios/">Comentarios</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Nuestras sucursales</h2>
+
+    {% for s in sucursales %}
+        <div class="sucursal">
+            <h3>{{ s.nombre }}</h3>
+            <p><strong>Dirección:</strong> {{ s.direccion }}</p>
+            <p><strong>Teléfono:</strong> {{ s.telefono }}</p>
+        </div>
+        <hr>
+    {% empty %}
+        <p>No hay sucursales registradas todavía.</p>
+    {% endfor %}
+</main>
+
+<footer>
+    <p>© 2025 Cafetería - Proyecto PIA</p>
+</footer>
+
+</body>
+</html>

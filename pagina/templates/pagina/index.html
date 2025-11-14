@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cafetería</title>
+
+    <!-- Archivo CSS si lo usas -->
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+</head>
+
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <h1>Cafetería</h1>
+
+        <!-- Menú de navegación -->
+        <nav>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="{% url 'productos' %}">Productos</a>
+            <a href="/autos/">Autos</a>
+            <a href="/eventos/">Eventos</a>
+            <a href="/sucursales/">Sucursales</a>
+            <a href="/comentarios/">Comentarios</a>
+        </nav>
+    </header>
+
+    <!-- Contenido -->
+    <main>
+        <h2>Bienvenido a nuestra cafetería</h2>
+        <p>
+            Este sitio web está diseñado para gestionar productos, autos, eventos, sucursales y comentarios,
+            además de brindar una experiencia visual amigable a los visitantes.
+        </p>
+        <p>
+            Usa el menú para navegar entre las secciones.
+        </p>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 Cafetería - Proyecto PIA</p>
+    </footer>
+
+</body>
+</html>

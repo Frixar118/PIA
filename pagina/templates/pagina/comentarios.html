@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comentarios</title>
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+</head>
+
+<body>
+
+<header>
+    <h1>Comentarios</h1>
+    <nav>
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'productos' %}">Productos</a>
+        <a href="{% url 'autos' %}">Autos</a>
+        <a href="{% url 'eventos' %}">Eventos</a>
+        <a href="{% url 'sucursales' %}">Sucursales</a>
+        <a href="{% url 'comentarios' %}">Comentarios</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Deja tu comentario</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <label>Autor:</label>
+        <input type="text" name="autor" required><br><br>
+
+        <label>Comentario:</label><br>
+        <textarea name="texto" id="textoComentario" maxlength="200" required></textarea>
+        <p id="contador">0 / 200 caracteres</p>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <hr>
+
+    <h2>Comentarios recientes</h2>
+
+    {% for c in comentarios %}
+        <div class="comentario">
+            <p><strong>{{ c.autor }}</strong> dijo:</p>
+            <p>{{ c.texto }}</p>
+            <small>{{ c.fecha }}</small>
+        </div>
+        <hr>
+    {% empty %}
+        <p>No hay comentarios todavía.</p>
+    {% endfor %}
+
+</main>
+
+<footer>
+    <p>© 2025 Cafetería - Proyecto PIA</p>
+</footer>
+
+<script src="{% static 'js/scripts.js' %}"></script>
+
+</body>
+</html>

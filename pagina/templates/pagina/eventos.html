@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+</head>
+
+<body>
+
+<header>
+    <h1>Eventos</h1>
+    <nav>
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'productos' %}">Productos</a>
+        <a href="{% url 'autos' %}">Autos</a>
+        <a href="{% url 'eventos' %}">Eventos</a>
+        <a href="/sucursales/">Sucursales</a>
+        <a href="/comentarios/">Comentarios</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Próximos eventos de la Cafetería</h2>
+
+    {% for evento in eventos %}
+        <div class="evento">
+            <h3>{{ evento.titulo }}</h3>
+            <p><strong>Fecha:</strong> {{ evento.fecha }}</p>
+
+            <!-- Descripción oculta -->
+            <p class="descripcion" style="display:none;">
+                {{ evento.descripcion }}
+            </p>
+
+            <!-- Botón para mostrar u ocultar -->
+            <button class="ver-detalle">Ver más</button>
+        </div>
+        <hr>
+    {% empty %}
+        <p>No hay eventos registrados todavía.</p>
+    {% endfor %}
+</main>
+
+<footer>
+    <p>© 2025 Cafetería - Proyecto PIA</p>
+</footer>
+
+<!-- Archivo JS -->
+<script src="{% static 'js/scripts.js' %}"></script>
+
+</body>
+</html>
