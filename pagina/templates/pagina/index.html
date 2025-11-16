@@ -3,45 +3,79 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cafetería</title>
-
-    <!-- Archivo CSS si lo usas -->
+    <title>Café Mapachitos</title>
     <link rel="stylesheet" href="{% static 'estilos.css' %}">
 </head>
 
 <body>
 
-    <!-- Encabezado -->
-    <header>
-        <h1>Cafetería</h1>
+<header class="header">
+    <h1 class="titulo-principal">Bienvenido a Café Mapachitos</h1>
 
-        <!-- Menú de navegación -->
-        <nav>
-            <a href="{% url 'inicio' %}">Inicio</a>
-            <a href="{% url 'productos' %}">Productos</a>
-            <a href="/autos/">Autos</a>
-            <a href="/eventos/">Eventos</a>
-            <a href="/sucursales/">Sucursales</a>
-            <a href="/comentarios/">Comentarios</a>
-        </nav>
-    </header>
+    <nav class="menu">
+        <a href="{% url 'inicio' %}">Inicio</a>
+        <a href="{% url 'productos' %}">Productos</a>
+        <a href="{% url 'autos' %}">Autos</a>
+        <a href="{% url 'eventos' %}">Eventos</a>
+        <a href="{% url 'sucursales' %}">Sucursales</a>
+        <a href="{% url 'comentarios' %}">Comentarios</a>
+    </nav>  
+</header>
+    
+<main class="contenido">
 
-    <!-- Contenido -->
-    <main>
-        <h2>Bienvenido a nuestra cafetería</h2>
+    <div class="imagenes-banner">
+        <img src="{% static 'img/banner1.png' %}" alt="Banner principal Cafetería" class="banner-img">
+    </div>
+
+    <section class="intro">
+        <h2>Tu espacio para disfrutar</h2>
         <p>
-            Este sitio web está diseñado para gestionar productos, autos, eventos, sucursales y comentarios,
-            además de brindar una experiencia visual amigable a los visitantes.
+            Bienvenido a Café Mapachitos, un rincón creado para que disfrutes bebidas deliciosas,
+            momentos agradables y experiencias únicas. Explora nuestros productos, autos promocionales,
+            eventos próximos, sucursales disponibles y comparte tus comentarios con nosotros.
         </p>
-        <p>
-            Usa el menú para navegar entre las secciones.
-        </p>
-    </main>
+    </section>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>© 2025 Cafetería - Proyecto PIA</p>
-    </footer>
+    <section class="cards">
+
+        <div class="card">
+            <h3>Productos</h3>
+            <p>Conoce nuestro menú de bebidas y alimentos.</p>
+            <a href="{% url 'productos' %}" class="boton">Ver productos</a>
+        </div>
+
+        <div class="card">
+            <h3>Autos</h3>
+            <p>Consulta los autos usados para publicidad o eventos.</p>
+            <a href="{% url 'autos' %}" class="boton">Ver autos</a>
+        </div>
+
+        <div class="card">
+            <h3>Eventos</h3>
+            <p>Descubre las actividades especiales y promociones.</p>
+            <a href="{% url 'eventos' %}" class="boton">Ver eventos</a>
+        </div>
+
+        <div class="card">
+            <h3>Sucursales</h3>
+            <p>Encuentra tu sucursal más cercana.</p>
+            <a href="{% url 'sucursales' %}" class="boton">Ver sucursales</a>
+        </div>
+
+        <div class="card">
+            <h3>Comentarios</h3>
+            <p>Comparte tu experiencia con nosotros.</p>
+            <a href="{% url 'comentarios' %}" class="boton">Comentar</a>
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© 2025 Café Mapachitos - Proyecto PIA</p>
+</footer>
 
 </body>
 </html>

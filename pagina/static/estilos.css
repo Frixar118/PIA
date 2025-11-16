@@ -1,0 +1,154 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f3e9dd;
+    color: #4b3f39;
+}
+
+.header {
+    background-color: #5e4630;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.titulo-principal {
+    margin: 0;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+
+.menu {
+    margin-top: 15px;
+}
+
+.menu a {
+    color: #f3e9dd;
+    padding: 10px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: #8b6f47;
+}
+
+.contenido {
+    padding: 30px;
+    text-align: center;
+}
+
+.intro h2 {
+    font-size: 2em;
+}
+
+.intro p {
+    font-size: 1.1em;
+    max-width: 750px;
+    margin: 0 auto 40px auto;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    background-color: #fff8f0;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #5e4630;
+}
+
+.boton {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    background-color: #8b6f47;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #5e4630;
+}
+
+.footer {
+    background-color: #5e4630;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.producto, .auto, .evento, .sucursal, .comentario {
+    background-color: #fff8f0;
+    padding: 15px;
+    margin: 15px auto;
+    width: 85%;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+}
+
+button, input[type="submit"] {
+    background-color: #8b6f47;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5e4630;
+}
+
+textarea, input[type="text"] {
+    width: 90%;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #b8a99a;
+    background-color: #faf3eb; 
+}
+
+#contador {
+    font-size: 0.9em;
+    color: #5e4630;
+}
+
+.imagenes-banner {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.banner-img {
+    width: 40%;
+    max-width: 1020px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.20);
+}
+
