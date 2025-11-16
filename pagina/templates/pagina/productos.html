@@ -27,8 +27,9 @@
 
     <h2 class="subtitulo">Nuestro Menú</h2>
     <p class="descripcion-menu">
-        En Café Mapachitos tenemos bebidas calientes, frías, postres y complementos hechos con dedicación 
-        y los mejores ingredientes. Aquí encontrarás nuestras opciones disponibles:
+        Te presentamos nuestras bebidas, postres y complementos preparados especialmente
+        para todos los amantes del café. Cada producto está elaborado con dedicación
+        y los mejores ingredientes.
     </p>
 
     <div class="productos-grid">
@@ -36,12 +37,22 @@
         {% for producto in productos %}
         <div class="producto-card">
 
+            <!-- Imagen del producto -->
             <div class="producto-img">
-                <img src="{% static 'img/producto-default.png' %}" alt="Imagen del producto">
+                {% if producto.imagen %}
+                    <img src="{% static producto.imagen %}" alt="{{ producto.nombre }}">
+                {% else %}
+                    <img src="{% static 'img/producto-default.png' %}" alt="Sin imagen">
+                {% endif %}
             </div>
 
+            <!-- Nombre -->
             <h3>{{ producto.nombre }}</h3>
+
+            <!-- Descripción -->
             <p class="producto-descripcion">{{ producto.descripcion }}</p>
+
+            <!-- Precio -->
             <p class="producto-precio">${{ producto.precio }} MXN</p>
 
         </div>

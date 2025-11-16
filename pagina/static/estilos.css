@@ -4,12 +4,12 @@ body {
     padding: 0;
     font-family: "Segoe UI", Arial, sans-serif;
     background-color: #f3e9dd;
-    color: #4b3f39;
+    color: #ffdbfd;
 }
 
 .header {
-    background-color: #5e4630;
-    color: white;
+    background-color: #fbcbff;
+    color: rgb(252, 162, 255);
     padding: 20px;
     text-align: center;
 }
@@ -207,7 +207,6 @@ textarea, input[type="text"] {
     margin-bottom: 25px;
 }
 
-/* tarjeta horizontal */
 .oferta {
     display: flex;
     align-items: center;
@@ -225,7 +224,6 @@ textarea, input[type="text"] {
     transform: scale(1.02);
 }
 
-/* texto a la izquierda */
 .oferta-texto {
     flex: 1;
     text-align: left;
@@ -244,7 +242,6 @@ textarea, input[type="text"] {
     color: #8b6f47;
 }
 
-/* imagen grande a la derecha */
 .oferta-img {
     width: 230px;
     height: auto;
@@ -266,7 +263,6 @@ textarea, input[type="text"] {
     font-size: 1.1em;
 }
 
-/* GRID de productos */
 .productos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -274,7 +270,6 @@ textarea, input[type="text"] {
     padding: 10px 20px;
 }
 
-/* Tarjeta */
 .producto-card {
     background-color: #fff8f0;
     padding: 18px;
@@ -288,7 +283,6 @@ textarea, input[type="text"] {
     transform: scale(1.05);
 }
 
-/* Imagen del producto */
 .producto-img img {
     width: 100%;
     max-width: 200px;
@@ -296,20 +290,17 @@ textarea, input[type="text"] {
     margin-bottom: 10px;
 }
 
-/* Nombre */
 .producto-card h3 {
     margin: 10px 0 5px 0;
     color: #5e4630;
 }
 
-/* Descripción */
 .producto-descripcion {
     font-size: 0.95em;
     color: #4b3f39;
     margin-bottom: 8px;
 }
 
-/* Precio */
 .producto-precio {
     font-weight: bold;
     color: #8b6f47;
