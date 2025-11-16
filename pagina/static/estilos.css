@@ -152,3 +152,166 @@ textarea, input[type="text"] {
     box-shadow: 0 3px 6px rgba(0,0,0,0.20);
 }
 
+.login-btn {
+    background-color: #8b6f47;
+    padding: 8px 14px;
+    border-radius: 6px;
+    margin-left: 15px;
+    color: white !important;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #5e4630;
+}
+
+.contenedor-lateral {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.lado-izquierdo {
+    flex: 3;
+}
+
+.sidebar {
+    flex: 1;
+    background-color: #fff8f0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.sidebar-img {
+    width: 100%;
+    max-width: 220px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.sidebar-text {
+    font-size: 1em;
+    color: #5e4630;
+}
+
+.ofertas {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.ofertas h2 {
+    font-size: 2.2em;
+    color: #5e4630;
+    margin-bottom: 25px;
+}
+
+/* tarjeta horizontal */
+.oferta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff8f0;
+    padding: 25px;
+    border-radius: 15px;
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.oferta:hover {
+    transform: scale(1.02);
+}
+
+/* texto a la izquierda */
+.oferta-texto {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.oferta-texto h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.7em;
+    color: #5e4630;
+}
+
+.oferta-texto p {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #8b6f47;
+}
+
+/* imagen grande a la derecha */
+.oferta-img {
+    width: 230px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.20);
+}
+
+.subtitulo {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #5e4630;
+    text-align: center;
+}
+
+.descripcion-menu {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+}
+
+/* GRID de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 10px 20px;
+}
+
+/* Tarjeta */
+.producto-card {
+    background-color: #fff8f0;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.producto-card:hover {
+    transform: scale(1.05);
+}
+
+/* Imagen del producto */
+.producto-img img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Nombre */
+.producto-card h3 {
+    margin: 10px 0 5px 0;
+    color: #5e4630;
+}
+
+/* Descripción */
+.producto-descripcion {
+    font-size: 0.95em;
+    color: #4b3f39;
+    margin-bottom: 8px;
+}
+
+/* Precio */
+.producto-precio {
+    font-weight: bold;
+    color: #8b6f47;
+    font-size: 1.2em;
+}

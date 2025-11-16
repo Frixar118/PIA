@@ -19,6 +19,7 @@
         <a href="{% url 'eventos' %}">Eventos</a>
         <a href="{% url 'sucursales' %}">Sucursales</a>
         <a href="{% url 'comentarios' %}">Comentarios</a>
+        <a href="/admin/login/" class="login-btn">Iniciar sesión</a>
     </nav>  
 </header>
     
@@ -31,13 +32,60 @@
     <section class="intro">
         <h2>Tu espacio para disfrutar</h2>
         <p>
-            Bienvenido a Café Mapachitos, un rincón creado para que disfrutes bebidas deliciosas,
-            momentos agradables y experiencias únicas. Explora nuestros productos, autos promocionales,
-            eventos próximos, sucursales disponibles y comparte tus comentarios con nosotros.
+            Bienvenido a Café Mapachitos, un rinconcito creado para disfrutar café, postres,
+            buena compañía y experiencias únicas.
         </p>
     </section>
 
-    <section class="cards">
+
+        <div class="contenedor-lateral">
+                <aside class="sidebar">
+                <img src="{% static 'img/mapachito.jpeg' %}" alt="Mapachito" class="sidebar-img">
+                <img src="{% static 'img/mapachito2.jpeg' %}" alt="Mapachito2" class="sidebar-img">
+                <img src="{% static 'img/mapachito3.jpeg' %}" alt="Mapachito3" class="sidebar-img">
+                <p class="sidebar-text">
+                    En Café Mapachitos siempre te espera una taza de felicidad.  
+                    Disfruta del mejor café acompañado de nuestro mapache favorito.
+                </p>
+                </aside>
+                
+        </div>
+    
+
+        <section class="ofertas">
+            <h2>Ofertas del Día</h2>
+
+            <div class="oferta">
+                <div class="oferta-texto">
+                    <h3>Café Latte + Galleta</h3>
+                    <p>Solo por hoy: $45 MXN</p>
+                </div>
+                <img src="{% static 'img/oferta1.png' %}" alt="Oferta 1" class="oferta-img">
+            </div>
+
+            <div class="oferta">
+                <div class="oferta-texto">
+                    <h3>Capuchino Grande</h3>
+                    <p>2x1 en horario matutino</p>
+                </div>
+                <img src="{% static 'img/oferta2.png' %}" alt="Oferta 2" class="oferta-img">
+            </div>
+
+            <div class="oferta">
+                <div class="oferta-texto">
+                    <h3>Frappé de Caramelo</h3>
+                    <p>Precio especial: $39 MXN</p>
+                </div>
+                <img src="{% static 'img/oferta3.png' %}" alt="Oferta 3" class="oferta-img">
+            </div>
+
+        </section>
+
+
+
+
+
+        <section class="cards">
 
         <div class="card">
             <h3>Productos</h3>
@@ -69,7 +117,6 @@
             <a href="{% url 'comentarios' %}" class="boton">Comentar</a>
         </div>
 
-    </section>
 
 </main>
 

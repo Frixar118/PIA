@@ -3,53 +3,57 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Productos</title>
+    <title>Productos - Café Mapachitos</title>
     <link rel="stylesheet" href="{% static 'estilos.css' %}">
 </head>
 
 <body>
 
-<header>
-    <h1>Productos</h1>
-    <nav>
+<header class="header">
+    <h1 class="titulo-principal">Productos de Café Mapachitos</h1>
+
+    <nav class="menu">
         <a href="{% url 'inicio' %}">Inicio</a>
-        <a href="{% url 'productos' %}">Productos</a>
-        <a href="/autos/">Autos</a>
-        <a href="/eventos/">Eventos</a>
-        <a href="/sucursales/">Sucursales</a>
-        <a href="/comentarios/">Comentarios</a>
+        <a href="{% url 'productos' %}" class="activo">Productos</a>
+        <a href="{% url 'autos' %}">Autos</a>
+        <a href="{% url 'eventos' %}">Eventos</a>
+        <a href="{% url 'sucursales' %}">Sucursales</a>
+        <a href="{% url 'comentarios' %}">Comentarios</a>
+        <a href="/admin/login/" class="login-btn">Iniciar sesión</a>
     </nav>
 </header>
 
-<main>
-    <h2>Nuestros productos disponibles</h2>
+<main class="contenido">
 
-    {% for p in productos %}
-        <div class="producto">
-            <h3>{{ p.nombre }}</h3>
-            <p><strong>Precio:</strong> ${{ p.precio }}</p>
+    <h2 class="subtitulo">Nuestro Menú</h2>
+    <p class="descripcion-menu">
+        En Café Mapachitos tenemos bebidas calientes, frías, postres y complementos hechos con dedicación 
+        y los mejores ingredientes. Aquí encontrarás nuestras opciones disponibles:
+    </p>
 
-            <!-- Descripción oculta -->
-            <p class="descripcion" style="display: none;">
-                {{ p.descripcion }}
-            </p>
+    <div class="productos-grid">
 
-            <!-- Botón que activará JavaScript -->
-            <button class="ver-detalle">Ver descripción</button>
+        {% for producto in productos %}
+        <div class="producto-card">
+
+            <div class="producto-img">
+                <img src="{% static 'img/producto-default.png' %}" alt="Imagen del producto">
+            </div>
+
+            <h3>{{ producto.nombre }}</h3>
+            <p class="producto-descripcion">{{ producto.descripcion }}</p>
+            <p class="producto-precio">${{ producto.precio }} MXN</p>
+
         </div>
-        <hr>
-    {% empty %}
-        <p>No hay productos registrados todavía.</p>
-    {% endfor %}
+        {% endfor %}
+
+    </div>
 
 </main>
 
-<footer>
-    <p>© 2025 Cafetería - Proyecto PIA</p>
+<footer class="footer">
+    <p>© 2025 Café Mapachitos - Proyecto PIA</p>
 </footer>
-
-<!-- Archivo JavaScript -->
-<script src="{% static 'js/scripts.js' %}"></script>
 
 </body>
 </html>
