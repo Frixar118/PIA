@@ -3,45 +3,56 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Autos</title>
+    <title>Autos - Café Mapachitos</title>
     <link rel="stylesheet" href="{% static 'estilos.css' %}">
 </head>
 
 <body>
 
-<header>
-    <h1>Autos disponibles</h1>
-    <nav>
+<header class="header">
+    <h1 class="titulo-principal">Autos de Café Mapachitos</h1>
+
+    <nav class="menu">
         <a href="{% url 'inicio' %}">Inicio</a>
         <a href="{% url 'productos' %}">Productos</a>
         <a href="{% url 'autos' %}">Autos</a>
-        <a href="/eventos/">Eventos</a>
-        <a href="/sucursales/">Sucursales</a>
-        <a href="/comentarios/">Comentarios</a>
+        <a href="{% url 'eventos' %}">Eventos</a>
+        <a href="{% url 'sucursales' %}">Sucursales</a>
+        <a href="{% url 'comentarios' %}">Comentarios</a>
+        <a href="/admin/login/" class="login-btn">Iniciar sesión</a>
     </nav>
 </header>
 
-<main>
-    <h2>Lista de Autos</h2>
+<main class="contenido">
 
-    {% for auto in autos %}
-        <div class="auto">
-            <h3>{{ auto.marca }} {{ auto.modelo }}</h3>
-            <p><strong>Año:</strong> {{ auto.año }}</p>
+    <h2 class="subtitulo">Autos Promocionales</h2>
+    <p class="descripcion-menu">
+        Coches decorados y listos para recorrer la ciudad con la energía de Café Mapachitos.
+    </p>
 
-            <button class="resaltar-boton">Resaltar</button>
+    <section class="productos-grid">
+
+        {% for auto in autos %}
+        <div class="producto-card">
+
+            <h3>{{ auto.modelo }}</h3>
+
+            <p class="producto-descripcion">
+                {{ auto.descripcion }}
+            </p>
+
         </div>
-        <hr>
-    {% empty %}
-        <p>No hay autos registrados todavía.</p>
-    {% endfor %}
+        {% empty %}
+            <p>No hay autos registrados todavía.</p>
+        {% endfor %}
+
+    </section>
+
 </main>
 
-<footer>
-    <p>© 2025 Cafetería - Proyecto PIA</p>
+<footer class="footer">
+    <p>© 2025 Café Mapachitos - Proyecto PIA</p>
 </footer>
-
-<script src="{% static 'js/scripts.js' %}"></script>
 
 </body>
 </html>

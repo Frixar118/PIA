@@ -3,6 +3,7 @@ from .models import Auto, Evento, Sucursal, Comentario
 
 def inicio(request):
     return render(request, 'pagina/index.html')
+
         
 from .models import Producto
 

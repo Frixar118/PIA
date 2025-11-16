@@ -3,52 +3,75 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Eventos</title>
+    <title>Eventos - Café Mapachitos</title>
     <link rel="stylesheet" href="{% static 'estilos.css' %}">
 </head>
 
 <body>
 
-<header>
-    <h1>Eventos</h1>
-    <nav>
+<header class="header">
+    <h1 class="titulo-principal">Eventos de Café Mapachitos</h1>
+
+    <nav class="menu">
         <a href="{% url 'inicio' %}">Inicio</a>
         <a href="{% url 'productos' %}">Productos</a>
         <a href="{% url 'autos' %}">Autos</a>
         <a href="{% url 'eventos' %}">Eventos</a>
-        <a href="/sucursales/">Sucursales</a>
-        <a href="/comentarios/">Comentarios</a>
+        <a href="{% url 'sucursales' %}">Sucursales</a>
+        <a href="{% url 'comentarios' %}">Comentarios</a>
+        <a href="/admin/login/" class="login-btn">Iniciar sesión</a>
     </nav>
 </header>
 
-<main>
-    <h2>Próximos eventos de la Cafetería</h2>
+<main class="contenido">
 
-    {% for evento in eventos %}
-        <div class="evento">
-            <h3>{{ evento.titulo }}</h3>
-            <p><strong>Fecha:</strong> {{ evento.fecha }}</p>
+    <h2 class="subtitulo">Próximos Eventos</h2>
+    <p class="descripcion-menu">
+        Descubre las actividades, promociones y celebraciones especiales que Café Mapachitos tiene para ti.
+        ¡Acompáñanos y disfruta del ambiente más dulce de la ciudad!
+    </p>
 
-            <!-- Descripción oculta -->
-            <p class="descripcion" style="display:none;">
-                {{ evento.descripcion }}
+    <section class="productos-grid">
+
+        {% for evento in eventos %}
+
+        <div class="producto-card">
+
+            <!-- Imagen -->
+            <div class="producto-img">
+                {% if evento.imagen %}
+                    <img src="{% static 'img/' %}{{ evento.imagen }}" alt="{{ evento.nombre }}">
+                {% else %}
+                    <img src="{% static 'img/producto-default.png' %}" alt="Sin imagen">
+                {% endif %}
+            </div>
+
+            <!-- Nombre -->
+            <h3>{{ evento.nombre }}</h3>
+
+            <!-- Descripción -->
+            <p class="producto-descripcion">{{ evento.descripcion }}</p>
+
+            <!-- Fecha del evento -->
+            {% if evento.fecha %}
+            <p class="producto-precio">
+                Fecha: {{ evento.fecha }}
             </p>
+            {% endif %}
 
-            <!-- Botón para mostrar u ocultar -->
-            <button class="ver-detalle">Ver más</button>
         </div>
-        <hr>
-    {% empty %}
-        <p>No hay eventos registrados todavía.</p>
-    {% endfor %}
+
+        {% empty %}
+            <p>No hay eventos registrados por ahora.</p>
+        {% endfor %}
+
+    </section>
+
 </main>
 
-<footer>
-    <p>© 2025 Cafetería - Proyecto PIA</p>
+<footer class="footer">
+    <p>© 2025 Café Mapachitos - Proyecto PIA</p>
 </footer>
-
-<!-- Archivo JS -->
-<script src="{% static 'js/scripts.js' %}"></script>
 
 </body>
 </html>

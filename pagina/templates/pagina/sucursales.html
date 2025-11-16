@@ -3,41 +3,63 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Sucursales</title>
+    <title>Sucursales - Café Mapachitos</title>
     <link rel="stylesheet" href="{% static 'estilos.css' %}">
 </head>
 
 <body>
 
-<header>
-    <h1>Sucursales</h1>
-    <nav>
+<header class="header">
+    <h1 class="titulo-principal">Sucursales Café Mapachitos</h1>
+
+    <nav class="menu">
         <a href="{% url 'inicio' %}">Inicio</a>
         <a href="{% url 'productos' %}">Productos</a>
         <a href="{% url 'autos' %}">Autos</a>
         <a href="{% url 'eventos' %}">Eventos</a>
         <a href="{% url 'sucursales' %}">Sucursales</a>
-        <a href="/comentarios/">Comentarios</a>
+        <a href="{% url 'comentarios' %}">Comentarios</a>
+        <a href="/admin/login/" class="login-btn">Iniciar sesión</a>
     </nav>
 </header>
 
-<main>
-    <h2>Nuestras sucursales</h2>
+<main class="contenido">
 
-    {% for s in sucursales %}
-        <div class="sucursal">
-            <h3>{{ s.nombre }}</h3>
-            <p><strong>Dirección:</strong> {{ s.direccion }}</p>
-            <p><strong>Teléfono:</strong> {{ s.telefono }}</p>
+    <h2 class="subtitulo">Nuestras Sucursales</h2>
+    <p class="descripcion-menu">
+        Encuentra la sucursal Café Mapachitos más cercana para disfrutar de tu bebida favorita.
+    </p>
+
+    <section class="productos-grid">
+
+        {% for sucursal in sucursales %}
+        <div class="producto-card">
+
+            <h3>{{ sucursal.nombre }}</h3>
+
+            <p class="producto-descripcion">
+                <strong>Dirección:</strong><br>
+                {{ sucursal.direccion }}
+            </p>
+
+            {% if sucursal.horario %}
+            <p class="producto-descripcion">
+                <strong>Horario:</strong><br>
+                {{ sucursal.horario }}
+            </p>
+            {% endif %}
+
         </div>
-        <hr>
-    {% empty %}
-        <p>No hay sucursales registradas todavía.</p>
-    {% endfor %}
+        {% empty %}
+            <p>No hay sucursales registradas aún.</p>
+        {% endfor %}
+
+    </section>
+
 </main>
 
-<footer>
-    <p>© 2025 Cafetería - Proyecto PIA</p>
+<footer class="footer">
+    <p>© 2025 Café Mapachitos - Proyecto PIA</p>
 </footer>
 
 </body>

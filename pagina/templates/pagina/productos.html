@@ -14,7 +14,6 @@
 
     <nav class="menu">
         <a href="{% url 'inicio' %}">Inicio</a>
-        <a href="{% url 'productos' %}" class="activo">Productos</a>
         <a href="{% url 'autos' %}">Autos</a>
         <a href="{% url 'eventos' %}">Eventos</a>
         <a href="{% url 'sucursales' %}">Sucursales</a>
@@ -37,7 +36,6 @@
         {% for producto in productos %}
         <div class="producto-card">
 
-            <!-- Imagen del producto -->
             <div class="producto-img">
                 {% if producto.imagen %}
                     <img src="{% static producto.imagen %}" alt="{{ producto.nombre }}">
