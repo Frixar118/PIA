@@ -27,40 +27,24 @@
 
     <h2 class="subtitulo">Próximos Eventos</h2>
     <p class="descripcion-menu">
-        Descubre las actividades, promociones y celebraciones especiales que Café Mapachitos tiene para ti.
-        ¡Acompáñanos y disfruta del ambiente más dulce de la ciudad!
+        Descubre las actividades y celebraciones que Café Mapachitos tiene preparadas para ti.
     </p>
 
     <section class="productos-grid">
 
         {% for evento in eventos %}
-
         <div class="producto-card">
 
-            <!-- Imagen -->
-            <div class="producto-img">
-                {% if evento.imagen %}
-                    <img src="{% static 'img/' %}{{ evento.imagen }}" alt="{{ evento.nombre }}">
-                {% else %}
-                    <img src="{% static 'img/producto-default.png' %}" alt="Sin imagen">
-                {% endif %}
-            </div>
-
-            <!-- Nombre -->
             <h3>{{ evento.nombre }}</h3>
 
-            <!-- Descripción -->
-            <p class="producto-descripcion">{{ evento.descripcion }}</p>
-
-            <!-- Fecha del evento -->
-            {% if evento.fecha %}
-            <p class="producto-precio">
-                Fecha: {{ evento.fecha }}
+            <p class="producto-descripcion">
+                {{ evento.descripcion }}
             </p>
-            {% endif %}
+            <p class="producto-precio">
+                Fecha: {{ evento.fecha|date:"j \\d\\e F \\d\\e Y" }}
+            </p>
 
         </div>
-
         {% empty %}
             <p>No hay eventos registrados por ahora.</p>
         {% endfor %}

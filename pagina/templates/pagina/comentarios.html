@@ -42,29 +42,32 @@
     <form action="" method="post">
         {% csrf_token %}
 
-        <div class="comentario">
-            <h3>Nuevo comentario</h3>
+ <h2>Deja tu comentario</h2>
 
-            <label>Nombre:</label><br>
-            <input type="text" name="nombre" required><br><br>
+    <form method="POST">
+        {% csrf_token %}
 
-            <label>Comentario:</label><br>
-            <textarea id="texto" name="mensaje" maxlength="200" onkeyup="actualizarContador()" required></textarea>
+        <label>Autor:</label>
+        <input type="text" name="autor" required><br><br>
 
-            <p id="contador">0/200 caracteres</p>
+        <label>Comentario:</label><br>
+        <textarea name="texto" id="textoComentario" maxlength="200" required></textarea>
+        <p id="contador">0 / 200 caracteres</p>
 
-            <input type="submit" value="Enviar comentario">
-        </div>
+        <button type="submit">Enviar</button>
     </form>
 
-    <h2 class="subtitulo">Comentarios recientes</h2>
+    <hr>
 
-    {% for comentario in comentarios %}
+    <h2>Comentarios recientes</h2>
+
+    {% for c in comentarios %}
         <div class="comentario">
-            <h3>{{ comentario.nombre }}</h3>
-            <p>{{ comentario.mensaje }}</p>
-            <small>{{ comentario.fecha }}</small>
+            <p><strong>{{ c.autor }}</strong> dijo:</p>
+            <p>{{ c.texto }}</p>
+            <small>{{ c.fecha }}</small>
         </div>
+        <hr>
     {% empty %}
         <p>No hay comentarios aún. ¡Sé el primero!</p>
     {% endfor %}

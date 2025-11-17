@@ -3,7 +3,6 @@ from .models import Auto, Evento, Sucursal, Comentario
 
 def inicio(request):
     return render(request, 'pagina/index.html')
-
         
 from .models import Producto
 
@@ -16,8 +15,8 @@ def autos(request):
     return render(request, 'pagina/autos.html', {'autos': lista_autos})
 
 def eventos(request):
-    lista_eventos = Evento.objects.all()
-    return render(request, 'pagina/eventos.html', {'eventos': lista_eventos})
+    eventos = Evento.objects.all()
+    return render(request, 'pagina/eventos.html', {'eventos': eventos})
 
 def sucursales(request):
     lista_sucursales = Sucursal.objects.all()

@@ -25,10 +25,25 @@
 
 <main class="contenido">
 
-    <h2 class="subtitulo">Nuestras Sucursales</h2>
-    <p class="descripcion-menu">
-        Encuentra la sucursal Café Mapachitos más cercana para disfrutar de tu bebida favorita.
-    </p>
+
+        <div class="sucursales-con-imagenes">
+
+            <div class="lado-img">  
+                <img src="{% static 'img/mapachito4.jpeg' %}" alt="Decoración" class="img-lateral">
+            </div>
+
+            <div class="centro-texto">
+                <h2 class="subtitulo">Nuestras Sucursales</h2>
+                <p class="descripcion-menu">
+                    Encuentra la sucursal Café Mapachitos más cercana para disfrutar de tu bebida favorita.
+                </p>
+            </div>
+            <div class="lado-img">
+                <img src="{% static 'img/mapachito5.jpeg' %}" alt="Decoración" class="img-lateral">
+            </div>
+
+        </div>
+
 
     <section class="productos-grid">
 
@@ -55,7 +70,9 @@
         {% endfor %}
 
     </section>
-
+    <section>
+        <h2 class="subtitulo">Estamos en expansión y próximas aperturas para llevar el sabor de Mapachitos a mas personas</h2>
+    </section>
 </main>
 
 <footer class="footer">

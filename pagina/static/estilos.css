@@ -268,13 +268,13 @@ body {
     color: #5e4630;
 }
 
-.producto-descripcion {
+.descripcion {
     font-size: 0.95em;
     color: #4b3f39;
     margin-bottom: 8px;
 }
 
-.producto-precio {
+.precio {
     font-weight: bold;
     color: #8b6f47;
     font-size: 1.2em;
@@ -289,4 +289,30 @@ body {
     padding: 15px;
     text-align: center;
     margin-top: 40px;
+}
+
+.sucursales-con-imagenes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.lado-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.img-lateral {
+    width: 170px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.20);
+}
+
+.centro-texto {
+    flex: 2;
+    text-align: center;
 }

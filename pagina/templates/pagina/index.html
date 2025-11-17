@@ -13,6 +13,7 @@
     <h1 class="titulo-principal">Bienvenido a Café Mapachitos</h1>
 
     <nav class="menu">
+        <a href="{% url 'inicio' %}">Inicio</a>
         <a href="{% url 'productos' %}">Productos</a>
         <a href="{% url 'autos' %}">Autos</a>
         <a href="{% url 'eventos' %}">Eventos</a>
@@ -56,8 +57,8 @@
 
             <div class="oferta">
                 <div class="oferta-texto">
-                    <h3>Café Latte + Galleta</h3>
-                    <p>Solo por hoy: $45 MXN</p>
+                    <h3>Café Latte vainilla + Galleta</h3>
+                    <p>Solo los sábados a $45 MXN</p>
                 </div>
                 <img src="{% static 'img/oferta1.png' %}" alt="Oferta 1" class="oferta-img">
             </div>
@@ -65,7 +66,7 @@
             <div class="oferta">
                 <div class="oferta-texto">
                     <h3>Capuchino Grande</h3>
-                    <p>2x1 en horario matutino</p>
+                    <p>2x1 en horario matutino de 8 a 11 AM</p>
                 </div>
                 <img src="{% static 'img/oferta2.png' %}" alt="Oferta 2" class="oferta-img">
             </div>
@@ -73,10 +74,17 @@
             <div class="oferta">
                 <div class="oferta-texto">
                     <h3>Frappé de Caramelo</h3>
-                    <p>Precio especial: $39 MXN</p>
+                    <p>Los miercoles a precio especial: $39 MXN</p>
                 </div>
                 <img src="{% static 'img/oferta3.png' %}" alt="Oferta 3" class="oferta-img">
             </div>
+
+            <div class="oferta">
+                <div class="oferta-texto">
+                    <h3>Descuento para estudiantes</h3>
+                    <p>Combo de cafe americano y un croissant a precio especial, para aquellos con credencial, a solo $45 </p>
+                </div>
+                <img src="{% static 'img/oferta4.png' %}" alt="Oferta 4" class="oferta-img">
 
         </section>
 
