@@ -25,6 +25,10 @@
 
 <main class="contenido">
 
+    <div class="banner-eventos">
+        <img src="{% static 'img/bannereventos.png' %}" alt="Eventos Mapachitos" class="banner-img-eventos">
+    </div>
+
     <h2 class="subtitulo">Próximos Eventos</h2>
     <p class="descripcion-menu">
         Descubre las actividades y celebraciones que Café Mapachitos tiene preparadas para ti.
@@ -40,6 +44,7 @@
             <p class="producto-descripcion">
                 {{ evento.descripcion }}
             </p>
+
             <p class="producto-precio">
                 Fecha: {{ evento.fecha|date:"j \\d\\e F \\d\\e Y" }}
             </p>
@@ -56,6 +61,7 @@
 <footer class="footer">
     <p>© 2025 Café Mapachitos - Proyecto PIA</p>
 </footer>
+
 
 </body>
 </html>
