@@ -1,20 +1,16 @@
-/* ================================
-   ESTILOS GENERALES
-================================ */
+
 body {
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", Arial, sans-serif;
-    background-color: #f3e9dd;
-    color: #4b3f39; /* Mejor contraste */
+    background-color: #f84c8ea5;
+    color: #c61a1ac7; 
 }
 
-/* ================================
-   HEADER Y MENÚ
-================================ */
+
 .header {
-    background-color: #e298e9;
-    color: #8d016a;
+    background-color: #fef4e6cc;
+    color: #c93459;
     padding: 20px;
     text-align: center;
 }
@@ -30,7 +26,7 @@ body {
 }
 
 .menu a {
-    color: #5e2f6e;
+    color: #e71b7eb4;
     padding: 10px 15px;
     margin: 0 5px;
     text-decoration: none;
@@ -40,13 +36,11 @@ body {
 }
 
 .menu a:hover {
-    background-color: #8b6f47;
+    background-color: #ffb6e2cd;
     color: white;
 }
 
-/* ================================
-   CONTENIDO PRINCIPAL
-================================ */
+
 .contenido {
     padding: 30px;
     text-align: center;
@@ -54,19 +48,17 @@ body {
 
 .intro h2 {
     font-size: 2.2em;
-    color: #5e4630;
+    color: #f8e6d4cf;
 }
 
 .intro p {
     font-size: 1.1em;
     max-width: 750px;
     margin: 0 auto 40px auto;
-    color: #5e4630;
+    color: #db4e79;
 }
 
-/* ================================
-   BANNER
-================================ */
+
 .imagenes-banner {
     display: flex;
     justify-content: center;
@@ -80,9 +72,7 @@ body {
     box-shadow: 0 3px 6px rgba(0,0,0,0.20);
 }
 
-/* ================================
-   TARJETAS DE SECCIONES
-================================ */
+
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -91,11 +81,11 @@ body {
 }
 
 .card {
-    background-color: #fbd4ff;
+    background-color: #dfffd4e4;
     padding: 20px;
     width: 250px;
     border-radius: 12px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgba(248, 101, 218, 0.904);
     text-align: center;
     transition: transform 0.3s;
 }
@@ -106,7 +96,7 @@ body {
 
 .card h3 {
     margin-top: 0;
-    color: #5e4630;
+    color: #d6386f;
 }
 
 /* Botones */
@@ -115,8 +105,8 @@ body {
     display: inline-block;
     margin-top: 10px;
     padding: 10px 18px;
-    background-color: #8b6f47;
-    color: white !important;
+    background-color: #f6fc9fe7;
+    color: rgb(246, 119, 183) !important;
     text-decoration: none;
     border-radius: 6px;
     transition: 0.3s;
@@ -124,12 +114,10 @@ body {
 
 .boton:hover,
 .login-btn:hover {
-    background-color: #5e4630;
+    background-color: #fe87b3;
 }
 
-/* ================================
-   LATERAL + SIDEBAR
-================================ */
+
 .contenedor-lateral {
     display: flex;
     gap: 30px;
@@ -142,10 +130,10 @@ body {
 
 .sidebar {
     flex: 1;
-    background-color: #fff8f0;
+    background-color: #bcf6ffba;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    box-shadow: 0 3px 6px rgb(103, 187, 247);
     text-align: center;
 }
 
@@ -161,9 +149,7 @@ body {
     color: #5e4630;
 }
 
-/* ================================
-   OFERTAS
-================================ */
+
 .ofertas {
     margin-top: 60px;
     text-align: center;
@@ -171,16 +157,15 @@ body {
 
 .ofertas h2 {
     font-size: 2.2em;
-    color: #ff8ce7;
+    color: #ca3569;
     margin-bottom: 25px;
 }
 
-/* Tarjeta de oferta */
 .oferta {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff8f0;
+    background-color: #f8ffd3eb;
     padding: 30px;
     border-radius: 15px;
     width: 90%;
@@ -202,13 +187,13 @@ body {
 .oferta-texto h3 {
     margin: 0 0 10px 0;
     font-size: 1.7em;
-    color: #5e4630;
+    color: #ff7bbf;
 }
 
 .oferta-texto p {
     font-size: 1.3em;
     font-weight: bold;
-    color: #8b6f47;
+    color: #cb4b7e;
 }
 
 .oferta-img {
@@ -217,14 +202,11 @@ body {
     box-shadow: 0 3px 6px rgba(0,0,0,0.20);
 }
 
-/* ================================
-   SECCIÓN PRODUCTOS
-================================ */
 
 .subtitulo {
     font-size: 2em;
     margin-bottom: 10px;
-    color: #5e4630;
+    color: #a92b53;
     text-align: center;
 }
 
@@ -244,7 +226,7 @@ body {
 }
 
 .producto-card {
-    background-color: #fff8f0;
+    background-color: #f5ffc1de;
     padding: 18px;
     border-radius: 12px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.15);
@@ -276,16 +258,14 @@ body {
 
 .precio {
     font-weight: bold;
-    color: #8b6f47;
+    color: #b2295b;
     font-size: 1.2em;
 }
 
-/* ================================
-   FOOTER
-================================ */
+
 .footer {
-    background-color: #5e4630;
-    color: white;
+    background-color: #ffb4cf;
+    color: rgb(135, 102, 4);
     padding: 15px;
     text-align: center;
     margin-top: 40px;
